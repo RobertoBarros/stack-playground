@@ -1,0 +1,6 @@
+@import 'config/tom_select';
+@import 'config/transitions';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

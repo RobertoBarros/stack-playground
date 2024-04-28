@@ -1,0 +1,9 @@
+
+<%= simple_form_for(@post) do |f| %>
+
+  <div class="grid grid-cols-2 gap-4">
+    <%= f.input :title, placeholder: 'Title of Post' %>
+    <%= f.input :description %>
+  </div>
+  <%= f.button :submit %>
+<% end %>
