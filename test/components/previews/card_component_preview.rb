@@ -1,5 +1,5 @@
 class CardComponentPreview < ViewComponent::Preview
-  # @display max_width 200px
+  # @display max_width 600px
   def default
     render CardComponent.new(title: "Olá")
   end
