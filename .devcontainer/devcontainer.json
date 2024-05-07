@@ -31,5 +31,13 @@
   // "remoteUser": "root",
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "bin/setup"
+  "postCreateCommand": "bin/setup",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "testdouble.vscode-standard-ruby",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
 }
