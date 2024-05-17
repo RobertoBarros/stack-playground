@@ -1,0 +1,29 @@
+<%= turbo_frame_tag 'new_post' do %>
+  <%= form_with model: post, class: "space-y-4" do |form| %>
+    <% if post.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(post.errors.count, "error") %> proibiu este exemplo de ser salvo:</h2>
+        <ul>
+          <% post.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="form-control">
+      <%= form.label :title, class: "label" do %>
+        <span class="label-text">Title</span>
+      <% end %>
+      <%= form.text_field :title, class: "input input-bordered w-full" %>
+    </div>
+    <div class="form-control">
+      <%= form.label :description, class: "label" do %>
+        <span class="label-text">Description</span>
+      <% end %>
+      <%= form.text_field :description, class: "input input-bordered w-full" %>
+    </div>
+    <div class="form-control mt-6">
+      <%= form.submit "Submit", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+<% end %>
